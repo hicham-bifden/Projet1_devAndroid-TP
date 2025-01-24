@@ -50,6 +50,14 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+
+
+    implementation ("androidx.compose.material:material:1.5.0") // Ou la dernière version stable
+    implementation ("androidx.compose.ui:ui:1.5.0")
+    implementation ("androidx.compose.ui:ui-tooling:1.5.0" )
+    implementation ("androidx.compose.runtime:runtime:1.5.0" )
+
+
     implementation ("androidx.navigation:navigation-compose:2.5.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
