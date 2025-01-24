@@ -217,37 +217,8 @@ fun HomeScreen(navController: NavController) {
 
 
 
-@Composable
-fun TaskListScreen(navController: NavController) {
-    val tasks = listOf(
-        Task(id = 1, title = "Tâche 1", description = "Description de la tâche 1", isCompleted = false),
-        Task(id = 2, title = "Tâche 2", description = "Description de la tâche 2", isCompleted = false)
-    )
 
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(tasks) { task ->
-            TaskItem(task = task, onTaskClick = {
-                // Navigation vers les détails de la tâche (à définir plus tard)
-            })
-        }
-    }
-}
 
-@Composable
-fun TaskItem(task: Task, onTaskClick: () -> Unit) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp)
-            .clickable { onTaskClick() },
-        shape = RoundedCornerShape(8.dp),
-        elevation = 4.dp
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = task.title, fontSize = 18.sp, fontWeight = FontWeight.Bold)
-            Text(text = task.description, fontSize = 14.sp, color = Color.Gray)
-        }
-    }
-}
+
 
 data class Task(val id: Int, val title: String, val description: String, val isCompleted: Boolean)
