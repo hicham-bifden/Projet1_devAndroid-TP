@@ -40,7 +40,8 @@ android {
 }
 
 dependencies {
-
+    // Autres dépendances ici
+    implementation ("androidx.navigation:navigation-compose:2.4.0") // j'ai ajouter cette ligne
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -61,6 +62,7 @@ dependencies {
     implementation ("androidx.navigation:navigation-compose:2.5.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.mediation.test.suite)
 
 
     testImplementation(libs.junit)
